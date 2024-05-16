@@ -28,8 +28,8 @@ public class Lecturer {
         connect();
 
         // Define the fields to populate in the comboBox1
-        String[] displayFields = {"Student", "Student Grade", "IT Supports", "Question", "Examination", "View Examination"};
-        String[] tableNames = {"student", "grade_student", "it_support", "question", "examination", "view_examination"};
+        String[] displayFields = {"Student", "Student Grade", "IT Supports", "Question", "Examination"};
+        String[] tableNames = {"student", "grade_student", "it_support", "question", "examination"};
 
         // Populate the map
         for (int i = 0; i < displayFields.length; i++) {
