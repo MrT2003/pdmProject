@@ -72,14 +72,9 @@ public class Student extends JFrame{
     }
 
     public static void main(String[] args) {
-        JFrame frame = new JFrame("Student");
-        frame.setContentPane(new Student().getMainPanel());
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.pack();
-        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        frame.setVisible(true);
+        initComponents();
     }
-    public void initComponents() {
+    public static void initComponents() {
         JFrame frame = new JFrame("Student");
         frame.setContentPane(new Student().getMainPanel());
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -91,12 +86,11 @@ public class Student extends JFrame{
     public void connect() {
         SQLServerDataSource ds = new SQLServerDataSource();
         ds.setUser("sa");
-        ds.setPassword("123456");
-        ds.setServerName("DESKTOP-EJIGPN3\\SQLEXPRESS");
+        ds.setPassword("Quenroi6212@");
+        ds.setServerName("DESKTOP-O34QFU6\\SQLEXPRESS");
         ds.setPortNumber(1433);
-        ds.setDatabaseName("OnlineExaminationSystem");
+        ds.setDatabaseName("Final_Project_PDM");
         ds.setEncrypt(false);
-
         try {
             con = ds.getConnection();
             System.out.println("Connection successful");
@@ -107,7 +101,6 @@ public class Student extends JFrame{
     void sign_out(){
         JFrame topFrame = (JFrame) SwingUtilities.getWindowAncestor(Main);
         topFrame.dispose();
-
         Login lg = new Login();
         lg.setVisible(true);
     }

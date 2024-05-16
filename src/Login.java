@@ -16,6 +16,7 @@ import java.sql.*;
  * @author Administrator
  */
 public class Login extends JFrame {
+    private JPanel Main;
     private Connection con;
     private static final String userID_2 = "ITCSIU21241";
     private static final String password_2 = "1234";
@@ -47,17 +48,20 @@ public class Login extends JFrame {
         String password = jTextField2.getText();
 
         if(userID.equalsIgnoreCase(userID_2) && password.equals(password_2)) {
-
             Student object = new Student();
             object.initComponents();
-            object.setVisible(true);
+//            object.setVisible(true);
             JOptionPane.showMessageDialog(this, "Login successful!");
         } else if(userID.equals(userID_3) && password.equals(password_3)) {
             Lecturer object = new Lecturer();
-//            object.initComponents();
             object.initComponents();
             JOptionPane.showMessageDialog(this, "Login successful!");
+        } else {
+            JOptionPane.showMessageDialog(this, "Invalid user ID or password.", "Login Failed", JOptionPane.ERROR_MESSAGE);
+            sign_out();
         }
+
+
 //
 //         Thực hiện xác thực tài khoản ở đây
 //        if (authenticate(userID, password)) {
@@ -71,19 +75,19 @@ public class Login extends JFrame {
 //        object.setVisible(true);
     }
 
-
-
-
+    private void sign_out(){
+        Login lg = new Login();
+        lg.setVisible(true);
+    }
 
     public void connect() {
         SQLServerDataSource ds = new SQLServerDataSource();
         ds.setUser("sa");
-        ds.setPassword("123456");
-        ds.setServerName("DESKTOP-EJIGPN3\\SQLEXPRESS");
+        ds.setPassword("Quenroi6212@");
+        ds.setServerName("DESKTOP-O34QFU6\\SQLEXPRESS");
         ds.setPortNumber(1433);
-        ds.setDatabaseName("OnlineExaminationSystem");
+        ds.setDatabaseName("Final_Project_PDM");
         ds.setEncrypt(false);
-
         try {
             con = ds.getConnection();
             System.out.println("Connection successful");
@@ -100,9 +104,6 @@ public class Login extends JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
-
-
-
         jLabel1 = new JLabel();
         jLabel2 = new JLabel();
         jTextField1 = new  RoundedTextField(20);

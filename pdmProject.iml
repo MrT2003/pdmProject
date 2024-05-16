@@ -7,25 +7,24 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="mysql-connector-java-8.0.26" level="project" />
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$MODULE_DIR$/../sqljdbc_12.6/enu/jars/mssql-jdbc-12.6.1.jre11.jar!/" />
+          <root url="jar://$MODULE_DIR$/../../../Máy tính/PDM_LAB_5/Lab5/rs2xml.jar!/" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES />
+        <SOURCES>
+          <root url="jar://$MODULE_DIR$/../../../Máy tính/PDM_LAB_5/Lab5/rs2xml.jar!/src" />
+        </SOURCES>
       </library>
     </orderEntry>
     <orderEntry type="module-library" exported="">
       <library>
         <CLASSES>
-          <root url="jar://$USER_HOME$/Downloads/Lab5/rs2xml.jar!/" />
+          <root url="jar://$USER_HOME$/Downloads/sqljdbc_12.6.1.0_enu/sqljdbc_12.6/enu/jars/mssql-jdbc-12.6.1.jre11.jar!/" />
         </CLASSES>
         <JAVADOC />
-        <SOURCES>
-          <root url="jar://$USER_HOME$/Downloads/Lab5/rs2xml.jar!/src" />
-        </SOURCES>
+        <SOURCES />
       </library>
     </orderEntry>
   </component>

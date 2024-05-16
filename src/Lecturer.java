@@ -101,12 +101,11 @@ public class Lecturer {
     public void connect() {
         SQLServerDataSource ds = new SQLServerDataSource();
         ds.setUser("sa");
-        ds.setPassword("123456");
-        ds.setServerName("DESKTOP-EJIGPN3\\SQLEXPRESS");
+        ds.setPassword("Quenroi6212@");
+        ds.setServerName("DESKTOP-O34QFU6\\SQLEXPRESS");
         ds.setPortNumber(1433);
-        ds.setDatabaseName("OnlineExaminationSystem");
-        ds.setEncrypt(false);
-
+        ds.setDatabaseName("Final_Project_PDM");
+                ds.setEncrypt(false);
         try {
             con = ds.getConnection();
             System.out.println("Connection successful");
